@@ -3,3 +3,5 @@ numpy
 pygame
 torch
 torchvision
+matplotlib
+ipython
