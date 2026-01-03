@@ -155,7 +155,7 @@ def train():
     try:
         plot_scores = []
         plot_mean_scores = []
-        total_score = []
+        total_score = 0
         record = 0
         agent = Agent()
         game = SnakeGame()
@@ -199,7 +199,7 @@ def train():
 
     except Exception as e:
         logger.error("Error while training agent and plotting agent performance graph.")
-        raise CustomException("Failed to train agent and to plot agent performance graph.")
+        raise CustomException("Failed to train agent and to plot agent performance graph.", e)
     
 
 

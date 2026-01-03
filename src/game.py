@@ -1,3 +1,4 @@
+import sys
 import pygame
 import random 
 import numpy as np
@@ -92,6 +93,7 @@ class SnakeGame:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
+                    sys.exit()
             
             # 2. Move
 
@@ -164,7 +166,7 @@ class SnakeGame:
                 pygame.draw.rect(self.display, BLUE1, pygame.Rect(pt.x, pt.y, BLOCK_SIZE, BLOCK_SIZE))
                 pygame.draw.rect(self.display, BLUE2, pygame.Rect(pt.x+4, pt.y+4, 12, 12))
             
-            pygame.drwa.rect(self.display, RED, pygame.Rect(self.food.x, self.food.y, BLOCK_SIZE, BLOCK_SIZE))
+            pygame.draw.rect(self.display, RED, pygame.Rect(self.food.x, self.food.y, BLOCK_SIZE, BLOCK_SIZE))
 
 
             text = font.render("Score: " + str(self.score), True, WHITE)
