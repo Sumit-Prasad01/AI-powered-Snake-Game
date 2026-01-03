@@ -10,7 +10,7 @@ logger = get_logger(__name__)
 
 plt.ion()
 
-def plot():
+def plot(scores, mean_scores):
     
     try:
         display.clear_output(wait = True)
